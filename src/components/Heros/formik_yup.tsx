@@ -109,7 +109,7 @@ const FormikYup: React.FC = () => {
     // 2. validate onchange , onBlur woking when submit once
     // 3. formink default validate onBlur
     // 4. FastField use when ~30+ fields
-    // 5. Not reset form and error
+    // 5. Not reset form and error must type = "button"
     // 6. Yup have validate but not show error
     // 7. reset form and clear message working but have problems
     // 8. use when or test
@@ -164,10 +164,10 @@ const FormikYup: React.FC = () => {
                         <br />
 
                         <button type="submit">Submit</button>
-                        <button onClick={() => props.handleReset} >Reset</button>
-                        <button onClick={() => props.setErrors({})} >Clear message error</button>
+                        <button type="button"  onClick={() => props.handleReset(initialValues)} >Reset</button>
+                        <button type="button" onClick={() => props.setErrors({})} >Clear message error</button>
 
-                        <button onClick={() => test(props)} >Test</button>
+                        <button type="button" onClick={() => test(props)} >Test</button>
 
 
 
